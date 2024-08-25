@@ -1,0 +1,78 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "version": "1.0.0",
+      "title": "Autobot API",
+      "description": "API para gerenciar Autobots, postagens e comentários"
+    },
+    "host": "localhost:3000",
+    "basePath": "/",
+    "schemes": [
+      "http"
+    ],
+    "paths": {
+      "/autobots": {
+        "get": {
+          "summary": "Lista os Autobots",
+          "description": "Retorna uma lista de Autobots",
+          "responses": {
+            "200": {
+              "description": "Lista de Autobots"
+            }
+          }
+        }
+      },
+      "/autobot/{id}/posts": {
+        "get": {
+          "summary": "Lista as postagens de um Autobot",
+          "description": "Retorna uma lista de postagens para um Autobot específico",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "type": "integer",
+              "description": "ID do Autobot"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Lista de postagens"
+            }
+          }
+        }
+      },
+      "/post/{id}/comments": {
+        "get": {
+          "summary": "Lista os comentários de uma postagem",
+          "description": "Retorna uma lista de comentários para uma postagem específica",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "type": "integer",
+              "description": "ID da Postagem"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Lista de comentários"
+            }
+          }
+        }
+      },
+      "/autobot-count": {
+        "get": {
+          "summary": "Retorna a contagem de Autobots criados",
+          "description": "Retorna a contagem total de Autobots criados",
+          "responses": {
+            "200": {
+              "description": "Contagem de Autobots"
+            }
+          }
+        }
+      }
+    }
+  }
+  

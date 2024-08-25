@@ -1,0 +1,32 @@
+{
+  "name": "jose",
+  "version": "1.0.0",
+  "description": "backend off chatboot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/server/Server.js",
+    "dev": "nodemon  src/server/Server.js",
+    "build": "nodemon  src/server/Server.js"
+  },
+  "keywords": [
+    "eu"
+  ],
+  "author": "Jose Orlando Chilengue",
+  "license": "MIT",
+  "dependencies": {
+    "@sequelize/core": "^7.0.0-alpha.37",
+    "axios": "^1.7.5",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "helmet": "^7.1.0",
+    "mysql": "^2.18.1",
+    "node-cron": "^3.0.3",
+    "nodemon": "^3.1.4",
+    "rate-limiter-flexible": "^5.0.3",
+    "sequelize": "^6.37.3",
+    "swagger": "^0.7.5",
+    "swagger-ui-express": "^5.0.1"
+  }
+}
